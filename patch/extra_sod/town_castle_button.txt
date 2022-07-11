@@ -1,0 +1,9 @@
+; ÍÀÇÂÀÍÈÅ: Town Castle Icon
+; ÂÅÐÑÈß: 1.0
+; ÀÂÒÎÐ: Lumi
+; ÎÏÈÑÀÍÈÅ: Â ýêðàíå ãîðîäà äåéñòâóåò êíîïêà Castle icon
+; EXE: SoD 3.2
+
+; 005D48CE: Castle icon
+;	je 005D4617 => je 005D39A5
+1D48CE 0F84D1F0FFFF

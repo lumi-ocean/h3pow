@@ -1,0 +1,17 @@
+; TITLE: pow launcher
+; VERSION: 1.0
+; AUTHOR: Lumi
+; DESCRIPTION: Load pow dll and start launcher
+; EXE: HD 5.3 R3 HD_Launcher.exe
+
+; Turn off NX compatible flag:
+;	40 81 => 40 80
+016E 4080
+
+; 00410AB8:
+;	HD_LauncherNative.dll => pow.dll
+F4B8 706F772E646C6C00
+
+; 00410AD0:
+;	Start => StartLauncher
+F4D0 53746172744C61756E6368657200

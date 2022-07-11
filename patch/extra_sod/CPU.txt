@@ -1,0 +1,22 @@
+; НАЗВАНИЕ: CPU
+; ВЕРСИЯ: 1.0
+; АВТОР: Berserker
+; ОПИСАНИЕ: Уменьшает нагрузку на процессор с 100% до 1-3% путём добавления вызова "Сон" в цикл получения сообщений ОС
+; EXE: TE или SoD 3.2
+
+; 4F8625:
+;	NOP(6) => CALL NEAR [DWORD 63A0F8]
+;	NOP(3) => SUB ESP,1C
+;	NOP(2) => JMP SHORT 004F8646
+0F8625 FF15F8A0630083EC1CEB16
+
+; 4F8641:
+;	MOV EBP,ESP; SUB ESP,1C => JMP 004F88A1
+0F8641 E95B020000
+
+; 4F88A1:
+;	NOP(2) => MOV EBP,ESP
+;	NOP(2) => PUSH 1
+;	NOP(6) => PUSH [DWORD 69965C]
+;	NOP(5) => JMP 004F8625
+0F88A1 8BEC6A01FF355C966900E975FDFFFF

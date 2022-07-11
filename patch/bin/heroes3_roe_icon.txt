@@ -1,0 +1,5 @@
+; TITLE: icon
+; VERSION: 1.0
+; AUTHOR: Lumi
+; DESCRIPTION: Exe file icon
+; EXE: SoD 3.2

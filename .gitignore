@@ -1,0 +1,8 @@
+*.exe
+*.dll
+*.bin
+
+.vs/
+Debug/
+Release/
+*.user

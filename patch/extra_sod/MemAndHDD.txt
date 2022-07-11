@@ -1,0 +1,13 @@
+; НАЗВАНИЕ: Memory and HDD checks patch
+; ВЕРСИЯ: 1.0
+; АВТОР: Berserker
+; ОПИСАНИЕ: Отключает проверки на наличие свободного места на диске и оперативной памяти, ибо бажные.
+; EXE: TE или SoD 3.2
+
+; 5776F9:
+;	JNB SHORT 0057772F => JMP SHORT 0057772F
+1776F9 EB
+
+; 4FBDDB:
+;	JNB SHORT 004FBE1C => JMP SHORT 004FBE1C
+0FBDDB EB
